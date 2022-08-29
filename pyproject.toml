@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "hll-rcon-log-analyzer"
+version = "0.1.0"
+description = "A tool to analyze Hell Let Loose RCON logs to identify interesting or suspicious behavior such as admin camera abuse."
+authors = ["Christopher Mathey <emathey@protonmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/cemathey/hll-rcon-log-analyzer"
+repository = "https://github.com/cemathey/hll-rcon-log-analyzer"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

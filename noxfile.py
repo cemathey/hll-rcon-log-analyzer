@@ -4,6 +4,7 @@ import nox
 
 locations_to_lint = "src", "tests", "noxfile.py"
 locations_to_black = locations_to_lint
+locations_to_type_check = locations_to_lint
 
 
 def install_with_constraints(session, *args, **kwargs):
@@ -52,6 +53,13 @@ def lint(session):
         "flake8-import-order",
     )
     session.run("flake8", *args)
+
+
+@nox.session(python=["3.10"])
+def typecheck(session):
+    args = session.posargs or locations_to_type_check
+    install_with_constraints(session, "mypy", "pandas-stubs")
+    session.run("mypy", *args)
 
 
 @nox.session(python=["3.10"])

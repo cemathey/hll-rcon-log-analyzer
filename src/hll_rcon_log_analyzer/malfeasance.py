@@ -21,7 +21,6 @@ def find_admin_cam_abuse(df: pd.DataFrame, config):
     configurable selected events (e.g. kills, team kills) before encountering a
     clearing event (e.g. a map change or expiration of a time period).
     """
-    print("Finding abuse:")
     selected_events = config["admin_cam_abuse"]["selected_events"]
     clearing_events = config["admin_cam_abuse"]["clearing_events"]
     clearing_time_delta = datetime.timedelta(

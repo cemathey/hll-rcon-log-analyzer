@@ -1,6 +1,7 @@
 """Contains high level functions to identify potentially malicious behavior in logs."""
 from dataclasses import dataclass
 import datetime
+
 import pandas as pd
 
 from hll_rcon_log_analyzer.constants import ENTERED_CAMERA

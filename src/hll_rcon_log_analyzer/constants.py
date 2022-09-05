@@ -45,6 +45,39 @@ COMMUNITY_RCON_CSV_HEADERS = [
     "weapon",
 ]
 
+COMMUNITY_RCON_CONTENT_PATTERNS: tuple[tuple[str, tuple[str, ...]], ...] = (
+    (
+        r"^(?:KICK|BAN): \[.+\] has been (?:kicked|banned)\. \[(.+?)\]{0,1}$",
+        ("admin_action_message",),
+    ),
+    (
+        r"MATCH START (.+) (WARFARE|OFFENSIVE|)",
+        ("map_name", "match_type"),
+    ),
+    (
+        r"MATCH ENDED `(.+) (WARFARE|OFFENSIVE|)` (ALLIED|AXIS) \((\d) - (\d)\) (\w+)",
+        ("map_name", "match_type", "map_score_allied", "map_score_axis"),
+    ),
+    (
+        r"\[\w+ \((\d+)\)\] (Entered Admin Camera|Left Admin Camera)",
+        ("player1_steamid64", "camera_event_type"),
+    ),
+    # Kill / Team Kill
+    (
+        r".+?(?:\(Allies|Axis)\/(\d+)\) -> .+?\((?:Allies|Axis)\/(\d+)\)",
+        (
+            "player1_steamid64",
+            "player2_steamid64",
+        ),
+    ),
+    # Chat
+    (r"^.+?:(.*) \((\d+)\)$", ("chat_message", "player1_steamid64")),
+    (
+        r"^TEAMSWITCH (.+) \((\w+) > (\w+)\)$",
+        ("player1_name", "team_switch_from", "team_switch_to"),
+    ),
+)
+
 
 ENTERED_CAMERA = "Entered Admin Camera"
 LEFT_CAMERA = "Left Admin Camera"

@@ -1,7 +1,13 @@
 # Event names need to exactly match how they appear in your log files
 
+# Choose which fields appear in each output type and in what order
+[output]
+console = ["player1_name",  "player1_steamid64", "type", "player2_name", "player2_steamid64"]
+
 [admin_cam_abuse]
+# What log events count towards abuse
 selected_events = ["KILL", "TEAM KILL"]
+# What log events reset checking for abuse, such as the end of a match
 clearing_events = ["MATCH ENDED", "MATCH START"]
 # The amount of time that needs to elapse before a selected event no longer
 # counts as abuse. You can enter it in any format you want for instance

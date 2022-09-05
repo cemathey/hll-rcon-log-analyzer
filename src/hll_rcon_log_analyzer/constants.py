@@ -6,29 +6,29 @@ CONFIG_FILE_NAME = "hll_rcon_log_analyzer.toml"
 
 # Needs to stay in sync with
 # https://github.com/MarechJ/hll_rcon_tool/blob/master/rcon/extended_commands.py
-LOG_ACTIONS = [
-    "DISCONNECTED",
+COMMUNITY_RCON_LOG_ACTIONS = [
+    "ADMIN BANNED",
+    "ADMIN KICKED",
+    "CHAT",
     "CHAT[Allies]",
-    "CHAT[Axis]",
-    "CHAT[Allies][Unit]",
-    "KILL",
-    "CONNECTED",
     "CHAT[Allies][Team]",
+    "CHAT[Allies][Unit]",
+    "CHAT[Axis]",
     "CHAT[Axis][Team]",
     "CHAT[Axis][Unit]",
-    "CHAT",
+    "CONNECTED",
+    "DISCONNECTED",
+    "KILL",
+    "MATCH ENDED",
+    "MATCH START",
+    "MATCH",
+    "TEAM KILL" "TEAMSWITCH",
+    "TK AUTO BANNED",
+    "TK AUTO KICKED",
+    "TK AUTO",
     "VOTE COMPLETED",
     "VOTE STARTED",
     "VOTE",
-    "TEAMSWITCH",
-    "TK AUTO",
-    "TK AUTO KICKED",
-    "TK AUTO BANNED",
-    "ADMIN KICKED",
-    "ADMIN BANNED",
-    "MATCH",
-    "MATCH START",
-    "MATCH ENDED",
 ]
 
 COMMUNITY_RCON_CSV_HEADERS = [

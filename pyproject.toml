@@ -12,6 +12,7 @@ repository = "https://github.com/cemathey/hll-rcon-log-analyzer"
 python = ">=3.10,<3.11"
 typer = {extras = ["all"], version = "^0.6.1"}
 pandas = "^1.4.3"
+tomli = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"

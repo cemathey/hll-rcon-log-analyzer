@@ -34,7 +34,7 @@ LOG_ACTIONS = [
 COMMUNITY_RCON_CSV_HEADERS = [
     "event_time",
     "type",
-    "player_name",
+    "player1_name",
     "player1_id",
     "player2_name",
     "player2_id",

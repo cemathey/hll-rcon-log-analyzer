@@ -42,3 +42,7 @@ COMMUNITY_RCON_CSV_HEADERS = [
     "server",
     "weapon",
 ]
+
+
+ENTERED_CAMERA = "Entered Admin Camera"
+LEFT_CAMERA = "Left Admin Camera"

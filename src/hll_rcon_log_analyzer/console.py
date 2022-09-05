@@ -1,4 +1,5 @@
 import csv
+from pathlib import Path
 
 import pandas as pd
 import typer
@@ -35,7 +36,7 @@ def admin_cam_abuse(
 ):
     """Search the given log file for admin camera abuse as defined in the config."""
     df = load_logs(path, COMMUNITY_RCON_CONTENT_PATTERNS)
-
+    converted_path = Path(output_path)
     collected_events: list[pd.DataFrame] = find_admin_cam_abuse(df, config)
 
     if output == "console":
@@ -45,9 +46,11 @@ def admin_cam_abuse(
             print(field_separator.join(values))
     elif output == "csv":
         if output_path == "":
-            output_path = find_not_existing_file("output", format="csv")
+            converted_path = find_not_existing_file("output", format="csv")
 
-        with open(output_path, "w+") as fp:
+        converted_path.parents[0].mkdir(parents=True, exist_ok=True)
+
+        with open(converted_path, "w+") as fp:
             csv_writer = csv.writer(fp, dialect="excel")
             csv_writer.writerows(collected_events)
 

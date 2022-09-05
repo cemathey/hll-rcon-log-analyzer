@@ -1,3 +1,9 @@
+from pathlib import Path
+
+PROJECT_ROOT_PATH = Path(__file__).parent.parent.parent
+
+CONFIG_FILE_NAME = "hll_rcon_log_analyzer.toml"
+
 # Needs to stay in sync with
 # https://github.com/MarechJ/hll_rcon_tool/blob/master/rcon/extended_commands.py
 LOG_ACTIONS = [

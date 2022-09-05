@@ -14,8 +14,8 @@ with open(full_path, mode="rb") as fp:
     config = tomli.load(fp)
 
     for event in (
-        config["community_rcon"]["selected_events"]
-        + config["community_rcon"]["clearing_events"]
+        config["admin_cam_abuse"]["selected_events"]
+        + config["admin_cam_abuse"]["clearing_events"]
     ):
         if event not in COMMUNITY_RCON_LOG_ACTIONS:
             raise ValueError(f"{event} in {full_path} is not a valid log action.")

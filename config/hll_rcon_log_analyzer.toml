@@ -12,4 +12,4 @@ clearing_events = ["MATCH ENDED", "MATCH START"]
 # The amount of time that needs to elapse before a selected event no longer
 # counts as abuse. You can enter it in any format you want for instance
 # 90 minutes, or 1 hour and 30 minutes but it will be the sum of ALL of the the fields
-timeout = { seconds = 3, minutes=150, hours=1 }
+timeout = { seconds = 0, minutes=30, hours=2 }

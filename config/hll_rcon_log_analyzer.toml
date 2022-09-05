@@ -2,7 +2,7 @@
 
 # Choose which fields appear in each output type and in what order
 [output]
-console = ["player1_name",  "player1_steamid64", "type", "player2_name", "player2_steamid64"]
+console = ["event_time", "camera_delta", "player1_name",  "player1_steamid64", "type", "player2_name", "player2_steamid64"]
 
 [admin_cam_abuse]
 # What log events count towards abuse

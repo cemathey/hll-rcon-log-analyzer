@@ -1,5 +1,8 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
+# Important!
+You need to put column headers in your log files for now, `event_time,type,player1_name,player1_id,player2_name,player2_id,content,server,weapon` needs to be the first row.
+
 # hll-rcon-log-analyzer
 
 A tool to analyze Hell Let Loose RCON logs to identify interesting or suspicious behavior such as admin camera abuse. Only admin camera abuse is currently implemented.

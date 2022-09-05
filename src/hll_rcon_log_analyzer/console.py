@@ -47,7 +47,7 @@ def admin_cam_abuse(
         if output_path == "":
             output_path = find_not_existing_file("output", format="csv")
 
-        with open(output_path, "w") as fp:
+        with open(output_path, "w+") as fp:
             csv_writer = csv.writer(fp, dialect="excel")
             csv_writer.writerows(collected_events)
 

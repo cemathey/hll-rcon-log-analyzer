@@ -6,7 +6,10 @@ from typing import Optional
 
 import pandas as pd
 
-from hll_rcon_log_analyzer.constants import PROJECT_ROOT_PATH
+from hll_rcon_log_analyzer.constants import (
+    PROJECT_ROOT_PATH,
+    COMMUNITY_RCON_CSV_HEADERS,
+)
 
 
 def find_not_existing_file(name: str, format: str, dir: Optional[Path] = None) -> Path:
@@ -55,6 +58,8 @@ def load_logs(file_path: str, patterns) -> pd.DataFrame:
         df = pd.read_csv(
             csvfile,
             parse_dates=["event_time"],
+            header=None,
+            names=COMMUNITY_RCON_CSV_HEADERS,
             dtype={
                 "player1_name": str,
                 "player1_id": str,

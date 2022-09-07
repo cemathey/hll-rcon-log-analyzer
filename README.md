@@ -1,7 +1,8 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 # Important!
-You need to put column headers in your log files for now, `event_time,type,player1_name,player1_id,player2_name,player2_id,content,server,weapon` needs to be the first row.
+
+[Community RCON](https://github.com/MarechJ/hll_rcon_tool) does not currently (last checked for v4.4.1) include column headers when downloading historical logs. The column headers are stored in `src/hll_rcon_log_analyzer/constants.py` in the `COMMUNITY_RCON_CSV_HEADERS` variable in the event the order changes.
 
 # hll-rcon-log-analyzer
 

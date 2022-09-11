@@ -5,4 +5,4 @@
 - Objectively measure who seeds, how often and for how long
 - More RCON log formats
 - Better documentation
--
+- Remove duplicate rows
